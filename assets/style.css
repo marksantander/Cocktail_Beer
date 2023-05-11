@@ -1,0 +1,36 @@
+header{
+    text-align: center;
+}
+
+html{
+    background-color:#00A3E0;
+}
+
+button{
+    background-color:#FF6600;
+    color:black;
+}
+.mainQuestion{
+    text-align: center;
+}
+
+.recipe{
+    text-align: center;
+}
+.finalQuestion{
+    text-align: center;
+}
+
+.ourRecommendations{
+ text-align: left;
+}
+
+.bottomSection{
+    display: flex;
+    justify-content: space-around;    
+}
+
+.usersFavorites{
+
+}
+
