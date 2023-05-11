@@ -38,6 +38,16 @@ button:focus {
     background-color:#FF6600;
 }
 
+.ageQuestion{
+    text-align: center;
+    border: #FF6600 solid;
+    background-color: black;
+    color: #00A3E0;
+    padding: 30px;
+    max-width: 30%;
+    margin: auto;   
+}
+
 .btn1{
 margin: 10px;
 }
