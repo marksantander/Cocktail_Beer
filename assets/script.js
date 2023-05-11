@@ -6,3 +6,4 @@ fetch(url).then(function(response) { return response.json()}).then(function(data
 let url2 = ["https://api.punkapi.com/v2/beers"]
 fetch(url2).then(function(response) { return response.json()}).then(function(data) { console.log(data)})
 
+
