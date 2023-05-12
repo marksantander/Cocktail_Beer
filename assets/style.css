@@ -1,4 +1,4 @@
-header {
+.title {
     text-align: center;
     font-size: xx-large;
     background-color:#FF6600;
@@ -59,7 +59,7 @@ margin: 10px;
     text-align: center;
 }
 
-.recipe {
+.mainImageArea {
     text-align: center;
 }
 
