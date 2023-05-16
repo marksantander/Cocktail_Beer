@@ -4,8 +4,9 @@
     background-color:#FF6600;
 }
 
-html {
+body {
     background-color: #00A3E0;
+    
 }
 
 button {
@@ -57,21 +58,25 @@ margin: 10px;
 }
 .mainQuestion {
     text-align: center;
+    display: none;
 }
 
 .mainImageArea {
     text-align: center;
-
+    display: none;
 }
 
 .finalQuestion {
     text-align: center;
+    display: none;
 }
 
 .ourRecommendations {
     border: #FF6600 solid;
     padding: 30px;
     margin-top: 5%;
+    display: none;
+    
 }
 
 .bottomSection {
@@ -83,4 +88,6 @@ margin: 10px;
     border: #FF6600 solid;
     padding: 30px;
     margin-top: 5%;
+   display: none;
+    
 }
