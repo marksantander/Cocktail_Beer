@@ -2,12 +2,13 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="./assets/style.css">
+    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Cocktails and Beer recipes</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 
 <body>
@@ -24,6 +25,7 @@
         <button id="younger">Younger than 21</button>
         <button id="older">Older than 21</button>
     </div>
+    <div id="notAllowed"></div>
 
     <div class="mainQuestion">
         <h3>What are you in the mood to drink?</h3>
@@ -48,12 +50,12 @@
         </aside>
         <div class="finalQuestion">
             <h3 class="flex2">Do you like the drink or you would like another option?</h3>
-            <button class="addFavorites">Yes!</button>
-            <button class="generateNewRecipe">No.</button>
+            <button id="addFavorites">Yes!</button>
+            <button id="generateNewRecipe">No.</button>
         </div>
 
         <aside id="usersFavorites" class="flex3">
-            <h4>Your favorites</h4>
+            <h4 id="favoriteList">Your favorites</h4>
             <ul>
                 <li class="favorites">asdasd</li>
                 <li class="favorites">asdasdsa</li>
