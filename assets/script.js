@@ -20,11 +20,14 @@ var addFavorites = document.getElementById("addFavorites")
 var generateNewRecipe = document.getElementById("generateNewRecipe")
 var cocktailButton = document.getElementById("cocktailQuestion")
 var beerButton = document.getElementById("beerQuestion")
+var ageQuestion= document.querySelector(".ageQuestion")
 
 function show(element) {
   element.style.display = "block";
 }
-
+function hide(element) {
+  element.style.display = "none";
+}
 
 underageRestriction.addEventListener("click", function () {
   var restriction = document.createElement("h2")
@@ -36,6 +39,7 @@ underageRestriction.addEventListener("click", function () {
 });
 accessAllowed.addEventListener("click", function () {
   show(question);
+  hide(ageQuestion);
   show(image);
   show(finalQuestion);
   show(ourRecomendations);
@@ -144,12 +148,11 @@ function displayFavorites() {
     userListOfFavorites.appendChild(li)
   }
 }
+
 displayFavorites()
 generateNewRecipe.addEventListener("click", function () {
-  if (cocktailButton === true) {
-    return (cocktailRecipe);
-  } else if (beerButton === true) {
-    return (beerRecipe);
-  }
+  document.getElementById('name').textContent=""
+  document.getElementById('recipe').textContent=""
+  document.getElementById('desc').textContent=""
 }
 )
