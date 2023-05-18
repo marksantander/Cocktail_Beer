@@ -8,6 +8,9 @@ body {
     background-color: #00A3E0;
     
 }
+li {
+    list-style: none;
+}
 
 button {
     color: black;
@@ -41,10 +44,10 @@ button:focus {
 
 .ageQuestion{
     text-align: center;
-    border: #FF6600 solid;
-    background-color: black;
-    color: #00A3E0;
+    border: #EA4C89 solid;
+    color: black;
     padding: 30px;
+    padding-bottom: 10px;
     max-width: 30%;
     margin: auto;   
 }
@@ -71,7 +74,7 @@ margin: 10px;
     display: none;
 }
 
-.ourRecommendations {
+#ourRecommendations {
     border: #FF6600 solid;
     padding: 30px;
     margin-top: 5%;

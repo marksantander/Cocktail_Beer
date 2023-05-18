@@ -2,79 +2,103 @@
 <html>
 
 <head>
-    
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cocktails and Beer recipes</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="https://kit.fontawesome.com/15181efa86.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/ghost-blog.css">
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 
-<body>
-    <div class="bg-image" style="background-image: url(https://uploads-ssl.webflow.com/5a9ee6416e90d20001b20038/635a90cf6b636e7feac7a645_obamas-resignation%20(4).svg)"></div>
-    <!--<header class="title">Cocktails & Beer Recipes</header>-->
-    <div class="title">
-        <div class="row column text-center">
-            <h1>Cocktails & Beer Recipes</h1>
-            <h2 class="subheader">Discover your favorite drinks here!</h2>
+<section class="hero is-medium">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <img src="../Cocktail_Beer/assets/images/headerLogo2.png" alt="cocktails and beers logo" width="800"
+                height="20" style="padding-bottom: 10px;"><br>
+                
+                <div class="ageQuestion">
+                    <h2>Are you older than 21?</h2>
+                    <button id="younger">Younger than 21</button>
+                    <button id="older">Older than 21</button>
+                </div>
+
+            <h3>What are you in the mood to drink?</h3>
+            <button id="cocktailQuestion" class="btn1">Cocktail</button>
+            <button id="beerQuestion" class="btn2">Beer</button>
         </div>
     </div>
-    <br>
-    <div class="ageQuestion">
-        <h2>Are you older than 21?</h2>
-        <button id="younger">Younger than 21</button>
-        <button id="older">Older than 21</button>
-    </div>
-    <div id="notAllowed"></div>
+</section>
+<section class="blog-posts">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-10 is-offset-1">
+                <div class="columns featured-post is-multiline">
+                    <div class="column is-12 post">
+                        <article class="columns featured">
+                            <div class="column is-7 post-img ">
+                                <img src="./assets/images/imageOfBar.jpeg" alt="image of a bar">
+                            </div>
+                            <div class="column is-5 featured-content va">
+                                <div>
+                                    <ul id="recipe">
+                                        <li>
+                                            <p id="name">List Recipes HERE</p>
+                                        </li>
+                                        <li>
+                                            <p>List Recipes HERE</p>
+                                        </li>
+                                        <li>
+                                            <p id="desc">List Recipes HERE</p>
+                                        </li>
+                                    </ul>
+                                    <br>
+                                    <h3 class="flex2">Do you like the drink or would you like another option?</h3>
+                                    <button id="addFavorites">Yes!</button>
+                                    <button id="generateNewRecipe">No.</button>
+                                </div>
 
-    <div class="mainQuestion">
-        <h3>What are you in the mood to drink?</h3>
-        <button id="cocktailQuestion" class="btn1">Cocktail</button>
-        <button id="beerQuestion" class="btn2">Beer</button>
-    </div>
-
-    <div class="mainImageArea">
-        <img class="thumbnail" src="./assets/images/imageOfBar.jpeg" width="850px" height="450px">
-        <ul id="recipe">
-            <li><p id="name">List Recipes HERE</p></li>
-            <li><p >List Recipes HERE</p></li>
-            <li><p id="desc">List Recipes HERE</p></li>
-        </ul>
-        
-    </div>
-    
-
-    <div class="bottomSection">
-
-        <aside class="ourRecommendations">
-            <h4>Our Recomendations</h4>
-            <ul>
-                <li><a href="https://www.martini.com/">Martini</a></li>
-                <li><a href="https://www.liquor.com/recipes/margarita/">Margarita</a></li>
-                <li><a href="https://www.foodnetwork.com/recipes/pina-colada-recipe0-1956362">Piña Colada</a></li>
-            </ul>
-        </aside>
-        <div class="finalQuestion">
-            <h3 class="flex2">Do you like the drink or you would like another option?</h3>
-            <button id="addFavorites">Yes!</button>
-            <button id="generateNewRecipe">No.</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <hr>
+                <div class="columns is-multiline">
+                    <div class="column post is-6">
+                        <div class="column is-12 post-img">
+                            <img src="./assets/images/recommendations.png" alt="Featured Image">
+                        </div>
+                        <div class="column is-12 featured-content" text-align="has-text-centered">
+                            <h4>Our Recomendations</h4>
+                            <ul>
+                                <li><a href="https://www.martini.com/">Martini</a></li>
+                                <li><a href="https://www.liquor.com/recipes/margarita/">Margarita</a></li>
+                                <li><a href="https://www.foodnetwork.com/recipes/pina-colada-recipe0-1956362">Piña
+                                        Colada</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="column post is-6">
+                        <div class="column is-12 post-img">
+                            <img src="./assets/images/favorites.png" alt="Featured Image">
+                        </div>
+                        <div class="column is-12 featured-content ">
+                            <h4 id="favoriteList">Your favorites</h4>
+                            <ul>
+                                <li class="favorites">asdasd</li>
+                                <li class="favorites">asdasdsa</li>
+                                <li class="favorites">dasdsadas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-    <div id="beerContainer"></div>
-
-        <aside id="usersFavorites" class="flex3">
-            <h4 id="favoriteList">Your favorites</h4>
-            <ul>
-                <li class="favorites">asdasd</li>
-                <li class="favorites">asdasdsa</li>
-                <li class="favorites">dasdsadas</li>
-            </ul>
-        </aside>
-    </div>
-
-    <script src="./assets/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-</body>
+</section>
 
 </html>
