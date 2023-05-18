@@ -77,6 +77,7 @@ beerButton.addEventListener("click", function beerRecipe() {
         recipeUl.appendChild(li)
       }
     });
+  show(finalQuestion);
 })
 
 cocktailButton.addEventListener("click", function cocktailRecipe() {
@@ -112,6 +113,7 @@ cocktailButton.addEventListener("click", function cocktailRecipe() {
         cocktail.strIngredient9, cocktail.strIngredient10, cocktail.strIngredient12,
         cocktail.strIngredient13, cocktail.strIngredient14, cocktail.strIngredient15);
     })
+  show(finalQuestion);
 })
 
 
