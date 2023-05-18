@@ -48,9 +48,9 @@ beerButton.addEventListener("click", function beerRecipe() {
     .then((data) => {
       var randomNumber = Math.floor(Math.random() * data.length)
       var beer = data[randomNumber];
-      console.log("Name:", beer.name);
-      console.log("Ingredients:", beer.ingredients);
-      console.log("Description :", beer.description);
+      var thumbnail = document.querySelector("#thumbnail")
+      const beerImage = beer.image_url;
+      thumbnail.src = beerImage;
       var displayName = document.getElementById('name')
       var recipeUl = document.getElementById('recipe');
       var descP = document.getElementById('desc')
@@ -92,21 +92,21 @@ cocktailButton.addEventListener("click", function cocktailRecipe() {
       recipeU2.textContent = cocktail.strInstructions
       var ingredients = []
       for (var i = 1; i < 16; i++) {
-        if (!cocktail["strIngredient" + i]){
+        if (!cocktail["strIngredient" + i]) {
           break;
         }
         ingredients.push(cocktail["strIngredient" + i])
       }
-    
+
       descP1.textContent = ingredients.join(", ")
-  
-     
+
+
       console.log("Instructions:", cocktail.strInstructions);
-      console.log("Ingredients:", cocktail.strIngredient1, cocktail.strIngredient2, 
-      cocktail.strIngredient3, cocktail.strIngredient4, cocktail.strIngredient5, 
-      cocktail.strIngredient6, cocktail.strIngredient7, cocktail.strIngredient8,
-      cocktail.strIngredient9, cocktail.strIngredient10, cocktail.strIngredient12, 
-      cocktail.strIngredient13, cocktail.strIngredient14, cocktail.strIngredient15);
+      console.log("Ingredients:", cocktail.strIngredient1, cocktail.strIngredient2,
+        cocktail.strIngredient3, cocktail.strIngredient4, cocktail.strIngredient5,
+        cocktail.strIngredient6, cocktail.strIngredient7, cocktail.strIngredient8,
+        cocktail.strIngredient9, cocktail.strIngredient10, cocktail.strIngredient12,
+        cocktail.strIngredient13, cocktail.strIngredient14, cocktail.strIngredient15);
     })
 })
 
