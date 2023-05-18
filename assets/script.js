@@ -156,5 +156,6 @@ generateNewRecipe.addEventListener("click", function () {
   document.getElementById('name').textContent=""
   document.getElementById('recipe').textContent=""
   document.getElementById('desc').textContent=""
+  hide (finalQuestion)
 }
 )
