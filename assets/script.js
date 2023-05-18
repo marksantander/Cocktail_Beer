@@ -111,7 +111,40 @@ cocktailButton.addEventListener("click", function cocktailRecipe() {
 })
 
 
-addFavorites.addEventListener("click",)
+addFavorites.addEventListener("click", function () {
+  const li = document.createElement("li")
+  const p = document.createElement("p")
+  var drinkName = document.getElementById("name").textContent
+  p.textContent = drinkName
+  li.appendChild(p)
+  addToFavorites(drinkName)
+  var userListOfFavorites = document.getElementById("favorites")
+  userListOfFavorites.appendChild(li)
+})
+function getFavorites() {
+  var favorites = localStorage.getItem("favorites")
+  if (favorites) {
+    return JSON.parse(favorites)
+  }
+  return []
+}
+function addToFavorites(drinkName) {
+  var favorites = getFavorites()
+  favorites.push(drinkName)
+  localStorage.setItem("favorites", JSON.stringify(favorites))
+}
+function displayFavorites() {
+  var favorites = getFavorites()
+  var userListOfFavorites = document.getElementById("favorites")
+  for (var i = 0; i < favorites.length; i++) {
+    const li = document.createElement("li")
+    const p = document.createElement("p")
+    p.textContent = favorites[i]
+    li.appendChild(p)
+    userListOfFavorites.appendChild(li)
+  }
+}
+displayFavorites()
 generateNewRecipe.addEventListener("click", function () {
   if (cocktailButton === true) {
     return (cocktailRecipe);
