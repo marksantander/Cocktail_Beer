@@ -1,15 +1,7 @@
-
-
-
-//let url = ["https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita"]
-//fetch(url).then(function(response) { return response.json()}).then(function(data) { console.log(data)})
-
-//let url2 = ["https://api.punkapi.com/v2/beers"]
-//fetch(url2).then(function(response) { return response.json()}).then(function(data) { console.log(data)})
 var beerContainer = document.getElementById("beerContainer");
 var recipe = document.getElementsByTagName("p")
 
-let url = ["https://www.thecocktaildb.com/api/json/v1/1/search.php?s="]
+let url = ["https://thecocktaildb.com/api/json/v1/1/random.php"]
 fetch(url).then(function (response) { return response.json() }).then(function (data) { console.log(data) })
 
 let url2 = ["https://api.punkapi.com/v2/beers"]
@@ -50,9 +42,6 @@ accessAllowed.addEventListener("click", function () {
   show(userFavorites);
 });
 
-
-
-
 beerButton.addEventListener("click", function beerRecipe() {
   fetch("https://api.punkapi.com/v2/beers")
     .then((response) => response.json())
@@ -68,36 +57,56 @@ beerButton.addEventListener("click", function beerRecipe() {
       var hops = beer.ingredients.hops
       var malt = beer.ingredients.malt
       displayName.textContent = beer.name
-      descP.textContent = beer.description   
-      for (i = 0; hops.length; i++) {
+      descP.textContent = beer.description
+      for (var i = 0; i < hops.length; i++) {
         const li = document.createElement('li')
         const p = document.createElement('p')
         li.appendChild(p);
-        p.textContent = ingredients[i]
+        p.textContent = hops.ingredients[i]
         recipeUl.appendChild(li)
       }
-      for (i = 0; malt.length; i++) {
+      for (var i = 0; i < malt.length; i++) {
         const li = document.createElement('li')
         const p = document.createElement('p')
         li.appendChild(p);
-        p.textContent = ingredients[i]
+        p.textContent = malt.ingredients[i]
         recipeUl.appendChild(li)
       }
-      
-
     });
-
 })
 
 cocktailButton.addEventListener("click", function cocktailRecipe() {
-  fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=")
+  fetch("https://thecocktaildb.com/api/json/v1/1/random.php")
     .then((response) => response.json())
     .then((data) => {
-      var randomNumber = Math.floor(Math.random() * data.length);
-      var cocktail = data[randomNumber];
+      console.log(data)
+      var randomNumber = Math.floor(Math.random() * data.drinks.length);
+      var cocktail = data.drinks[randomNumber];
+      var thumbnail = document.querySelector("#thumbnail")
+      const strDrinkThumb = data.drinks[0].strDrinkThumb;
+      thumbnail.src = strDrinkThumb;
+      var drinkName = document.getElementById('name')
+      var recipeU2 = document.getElementById('recipe');
+      var descP1 = document.getElementById('desc')
+      drinkName.textContent = cocktail.strDrink
+      recipeU2.textContent = cocktail.strInstructions
+      var ingredients = []
+      for (var i = 1; i < 16; i++) {
+        if (!cocktail["strIngredient" + i]){
+          break;
+        }
+        ingredients.push(cocktail["strIngredient" + i])
+      }
+    
+      descP1.textContent = ingredients.join(", ")
+  
      
       console.log("Instructions:", cocktail.strInstructions);
-      console.log("Ingredients:", cocktail.strIngredient1, strIngredient2);
+      console.log("Ingredients:", cocktail.strIngredient1, cocktail.strIngredient2, 
+      cocktail.strIngredient3, cocktail.strIngredient4, cocktail.strIngredient5, 
+      cocktail.strIngredient6, cocktail.strIngredient7, cocktail.strIngredient8,
+      cocktail.strIngredient9, cocktail.strIngredient10, cocktail.strIngredient12, 
+      cocktail.strIngredient13, cocktail.strIngredient14, cocktail.strIngredient15);
     })
 })
 
